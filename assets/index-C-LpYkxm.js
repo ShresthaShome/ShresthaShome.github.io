@@ -12140,7 +12140,7 @@ function xy({ contacts: A }) {
   });
 }
 function qy() {
-  const A = { name: "Ullas Shome", address: "Tangail, Bangladesh" },
+  const A = { name: "Shrestha Shome Ullas", address: "Tangail, Bangladesh" },
     w = [
       {
         title: "Ullas's PC Repair Shop",
