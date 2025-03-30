@@ -7,7 +7,7 @@ import "./styles/App.css";
 
 function App() {
   const myInfo = {
-    name: "Ullas Shome",
+    name: "Shrestha Shome Ullas",
     address: "Tangail, Bangladesh",
   };
 
