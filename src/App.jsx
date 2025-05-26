@@ -13,9 +13,9 @@ function App() {
 
   const projects = [
     {
-      title: "Ullas's PC Repair Shop",
-      image: "src/assets/images/PC.png",
-      link: "https://repairshop-by-ullas.vercel.app/home/",
+      title: "Temu E-commerce clone",
+      image: "src/assets/images/Temu.png",
+      link: "https://temu-ecom.vercel.app/",
     },
     {
       title: "IMDb clone",
@@ -23,14 +23,24 @@ function App() {
       link: "https://imdb-by-ullas.vercel.app/",
     },
     {
-      title: "Notion AI Clone",
-      image: "src/assets/images/Notion.png",
-      link: "https://cloned-notion-ai.vercel.app/",
+      title: "Startup Directory",
+      image: "src/assets/images/startups.png",
+      link: "https://yc-startup-directory.vercel.app/",
+    },
+    {
+      title: "Ullas's PC Repair Shop",
+      image: "src/assets/images/PC.png",
+      link: "https://repairshop-by-ullas.vercel.app/home/",
     },
     {
       title: "AI Chatbot",
       image: "src/assets/images/Helpbot.png",
       link: "https://ai-helper-chatbot.vercel.app/",
+    },
+    {
+      title: "Notion AI Clone",
+      image: "src/assets/images/Notion.png",
+      link: "https://cloned-notion-ai.vercel.app/",
     },
   ];
 
