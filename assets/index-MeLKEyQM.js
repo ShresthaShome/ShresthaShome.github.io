@@ -65,7 +65,7 @@ var Gd;
 function gy() {
   return Gd || ((Gd = 1), (Wc.exports = my())), Wc.exports;
 }
-var D = gy(),
+var _ = gy(),
   $c = { exports: {} },
   B = {};
 /**
@@ -3358,15 +3358,15 @@ Error generating stack: ` +
         : ((d = e(d, y)), (d.return = h), d);
     }
     function i(h, d, y, S) {
-      var _ = y.type;
-      return _ === U
+      var D = y.type;
+      return D === U
         ? g(h, d, y.props.children, S, y.key)
         : d !== null &&
-          (d.elementType === _ ||
-            (typeof _ == "object" &&
-              _ !== null &&
-              _.$$typeof === jl &&
-              is(_) === d.type))
+          (d.elementType === D ||
+            (typeof D == "object" &&
+              D !== null &&
+              D.$$typeof === jl &&
+              is(D) === d.type))
         ? ((d = e(d, y.props)), Ka(d, y), (d.return = h), d)
         : ((d = yn(y.type, y.key, y.props, null, h.mode, S)),
           Ka(d, y),
@@ -3381,9 +3381,9 @@ Error generating stack: ` +
         ? ((d = vc(y, h.mode, S)), (d.return = h), d)
         : ((d = e(d, y.children || [])), (d.return = h), d);
     }
-    function g(h, d, y, S, _) {
+    function g(h, d, y, S, D) {
       return d === null || d.tag !== 7
-        ? ((d = Bu(y, h.mode, S, _)), (d.return = h), d)
+        ? ((d = Bu(y, h.mode, S, D)), (d.return = h), d)
         : ((d = e(d, y)), (d.return = h), d);
     }
     function b(h, d, y) {
@@ -3417,60 +3417,60 @@ Error generating stack: ` +
       return null;
     }
     function r(h, d, y, S) {
-      var _ = d !== null ? d.key : null;
+      var D = d !== null ? d.key : null;
       if (
         (typeof y == "string" && y !== "") ||
         typeof y == "number" ||
         typeof y == "bigint"
       )
-        return _ !== null ? null : c(h, d, "" + y, S);
+        return D !== null ? null : c(h, d, "" + y, S);
       if (typeof y == "object" && y !== null) {
         switch (y.$$typeof) {
           case dl:
-            return y.key === _ ? i(h, d, y, S) : null;
+            return y.key === D ? i(h, d, y, S) : null;
           case Ol:
-            return y.key === _ ? v(h, d, y, S) : null;
+            return y.key === D ? v(h, d, y, S) : null;
           case jl:
-            return (_ = y._init), (y = _(y._payload)), r(h, d, y, S);
+            return (D = y._init), (y = D(y._payload)), r(h, d, y, S);
         }
-        if (p(y) || Ql(y)) return _ !== null ? null : g(h, d, y, S, null);
+        if (p(y) || Ql(y)) return D !== null ? null : g(h, d, y, S, null);
         if (typeof y.then == "function") return r(h, d, we(y), S);
         if (y.$$typeof === gl) return r(h, d, dn(h, y), S);
         We(h, y);
       }
       return null;
     }
-    function m(h, d, y, S, _) {
+    function m(h, d, y, S, D) {
       if (
         (typeof S == "string" && S !== "") ||
         typeof S == "number" ||
         typeof S == "bigint"
       )
-        return (h = h.get(y) || null), c(d, h, "" + S, _);
+        return (h = h.get(y) || null), c(d, h, "" + S, D);
       if (typeof S == "object" && S !== null) {
         switch (S.$$typeof) {
           case dl:
             return (
-              (h = h.get(S.key === null ? y : S.key) || null), i(d, h, S, _)
+              (h = h.get(S.key === null ? y : S.key) || null), i(d, h, S, D)
             );
           case Ol:
             return (
-              (h = h.get(S.key === null ? y : S.key) || null), v(d, h, S, _)
+              (h = h.get(S.key === null ? y : S.key) || null), v(d, h, S, D)
             );
           case jl:
             var C = S._init;
-            return (S = C(S._payload)), m(h, d, y, S, _);
+            return (S = C(S._payload)), m(h, d, y, S, D);
         }
-        if (p(S) || Ql(S)) return (h = h.get(y) || null), g(d, h, S, _, null);
-        if (typeof S.then == "function") return m(h, d, y, we(S), _);
-        if (S.$$typeof === gl) return m(h, d, y, dn(d, S), _);
+        if (p(S) || Ql(S)) return (h = h.get(y) || null), g(d, h, S, D, null);
+        if (typeof S.then == "function") return m(h, d, y, we(S), D);
+        if (S.$$typeof === gl) return m(h, d, y, dn(d, S), D);
         We(d, S);
       }
       return null;
     }
     function M(h, d, y, S) {
       for (
-        var _ = null, C = null, R = d, H = (d = 0), Ul = null;
+        var D = null, C = null, R = d, H = (d = 0), Ul = null;
         R !== null && H < y.length;
         H++
       ) {
@@ -3482,19 +3482,19 @@ Error generating stack: ` +
         }
         l && R && $.alternate === null && t(h, R),
           (d = n($, d, H)),
-          C === null ? (_ = $) : (C.sibling = $),
+          C === null ? (D = $) : (C.sibling = $),
           (C = $),
           (R = Ul);
       }
-      if (H === y.length) return u(h, R), W && Du(h, H), _;
+      if (H === y.length) return u(h, R), W && Du(h, H), D;
       if (R === null) {
         for (; H < y.length; H++)
           (R = b(h, y[H], S)),
             R !== null &&
               ((d = n(R, d, H)),
-              C === null ? (_ = R) : (C.sibling = R),
+              C === null ? (D = R) : (C.sibling = R),
               (C = R));
-        return W && Du(h, H), _;
+        return W && Du(h, H), D;
       }
       for (R = a(R); H < y.length; H++)
         (Ul = m(R, h, H, y[H], S)),
@@ -3503,7 +3503,7 @@ Error generating stack: ` +
               Ul.alternate !== null &&
               R.delete(Ul.key === null ? H : Ul.key),
             (d = n(Ul, d, H)),
-            C === null ? (_ = Ul) : (C.sibling = Ul),
+            C === null ? (D = Ul) : (C.sibling = Ul),
             (C = Ul));
       return (
         l &&
@@ -3511,13 +3511,13 @@ Error generating stack: ` +
             return t(h, Su);
           }),
         W && Du(h, H),
-        _
+        D
       );
     }
     function j(h, d, y, S) {
       if (y == null) throw Error(o(151));
       for (
-        var _ = null, C = null, R = d, H = (d = 0), Ul = null, $ = y.next();
+        var D = null, C = null, R = d, H = (d = 0), Ul = null, $ = y.next();
         R !== null && !$.done;
         H++, $ = y.next()
       ) {
@@ -3529,26 +3529,26 @@ Error generating stack: ` +
         }
         l && R && Su.alternate === null && t(h, R),
           (d = n(Su, d, H)),
-          C === null ? (_ = Su) : (C.sibling = Su),
+          C === null ? (D = Su) : (C.sibling = Su),
           (C = Su),
           (R = Ul);
       }
-      if ($.done) return u(h, R), W && Du(h, H), _;
+      if ($.done) return u(h, R), W && Du(h, H), D;
       if (R === null) {
         for (; !$.done; H++, $ = y.next())
           ($ = b(h, $.value, S)),
             $ !== null &&
               ((d = n($, d, H)),
-              C === null ? (_ = $) : (C.sibling = $),
+              C === null ? (D = $) : (C.sibling = $),
               (C = $));
-        return W && Du(h, H), _;
+        return W && Du(h, H), D;
       }
       for (R = a(R); !$.done; H++, $ = y.next())
         ($ = m(R, h, H, $.value, S)),
           $ !== null &&
             (l && $.alternate !== null && R.delete($.key === null ? H : $.key),
             (d = n($, d, H)),
-            C === null ? (_ = $) : (C.sibling = $),
+            C === null ? (D = $) : (C.sibling = $),
             (C = $));
       return (
         l &&
@@ -3556,7 +3556,7 @@ Error generating stack: ` +
             return t(h, oy);
           }),
         W && Du(h, H),
-        _
+        D
       );
     }
     function ol(h, d, y, S) {
@@ -3571,9 +3571,9 @@ Error generating stack: ` +
         switch (y.$$typeof) {
           case dl:
             l: {
-              for (var _ = y.key; d !== null; ) {
-                if (d.key === _) {
-                  if (((_ = y.type), _ === U)) {
+              for (var D = y.key; d !== null; ) {
+                if (d.key === D) {
+                  if (((D = y.type), D === U)) {
                     if (d.tag === 7) {
                       u(h, d.sibling),
                         (S = e(d, y.props.children)),
@@ -3582,11 +3582,11 @@ Error generating stack: ` +
                       break l;
                     }
                   } else if (
-                    d.elementType === _ ||
-                    (typeof _ == "object" &&
-                      _ !== null &&
-                      _.$$typeof === jl &&
-                      is(_) === d.type)
+                    d.elementType === D ||
+                    (typeof D == "object" &&
+                      D !== null &&
+                      D.$$typeof === jl &&
+                      is(D) === d.type)
                   ) {
                     u(h, d.sibling),
                       (S = e(d, y.props)),
@@ -3612,8 +3612,8 @@ Error generating stack: ` +
             return f(h);
           case Ol:
             l: {
-              for (_ = y.key; d !== null; ) {
-                if (d.key === _)
+              for (D = y.key; d !== null; ) {
+                if (d.key === D)
                   if (
                     d.tag === 4 &&
                     d.stateNode.containerInfo === y.containerInfo &&
@@ -3635,12 +3635,12 @@ Error generating stack: ` +
             }
             return f(h);
           case jl:
-            return (_ = y._init), (y = _(y._payload)), ol(h, d, y, S);
+            return (D = y._init), (y = D(y._payload)), ol(h, d, y, S);
         }
         if (p(y)) return M(h, d, y, S);
         if (Ql(y)) {
-          if (((_ = Ql(y)), typeof _ != "function")) throw Error(o(150));
-          return (y = _.call(y)), j(h, d, y, S);
+          if (((D = Ql(y)), typeof D != "function")) throw Error(o(150));
+          return (y = D.call(y)), j(h, d, y, S);
         }
         if (typeof y.then == "function") return ol(h, d, we(y), S);
         if (y.$$typeof === gl) return ol(h, d, dn(h, y), S);
@@ -3659,8 +3659,8 @@ Error generating stack: ` +
     return function (h, d, y, S) {
       try {
         La = 0;
-        var _ = ol(h, d, y, S);
-        return (ea = null), _;
+        var D = ol(h, d, y, S);
+        return (ea = null), D;
       } catch (R) {
         if (R === Za) throw R;
         var C = dt(29, R, null, h.mode);
@@ -9672,11 +9672,11 @@ Error generating stack: ` +
             (m = r.nodeName && r.nodeName.toLowerCase()),
             m === "select" || (m === "input" && r.type === "file"))
           )
-            var _ = Yi;
+            var D = Yi;
           else if (qi(r))
-            if (Bi) _ = $v;
+            if (Bi) D = $v;
             else {
-              _ = wv;
+              D = wv;
               var C = Jv;
             }
           else
@@ -9684,10 +9684,10 @@ Error generating stack: ` +
               !m ||
               m.toLowerCase() !== "input" ||
               (r.type !== "checkbox" && r.type !== "radio")
-                ? v && wn(v.elementType) && (_ = Yi)
-                : (_ = Wv);
-          if (_ && (_ = _(l, v))) {
-            ji(b, _, u, g);
+                ? v && wn(v.elementType) && (D = Yi)
+                : (D = Wv);
+          if (D && (D = D(l, v))) {
+            ji(b, D, u, g);
             break l;
           }
           C && C(l, r, v),
@@ -11932,13 +11932,13 @@ function _y() {
 }
 var Dy = _y();
 function My({ name: A }) {
-  return D.jsx("div", {
+  return _.jsx("div", {
     className: "-mb-3",
-    children: D.jsxs("a", {
+    children: _.jsxs("a", {
       href: "/",
       children: [
-        D.jsx("span", { className: "logo", children: A }),
-        D.jsx("span", { className: "text-red-600 text-4xl", children: "." }),
+        _.jsx("span", { className: "logo", children: A }),
+        _.jsx("span", { className: "text-red-600 text-4xl", children: "." }),
       ],
     }),
   });
@@ -11951,7 +11951,7 @@ function Cu({ children: A, html: w }) {
           .scrollIntoView({ behavior: "smooth" })
       : (window.location.href = w);
   };
-  return D.jsx("button", {
+  return _.jsx("button", {
     onClick: G,
     className:
       "border border-transparent hover:border-blue-300 rounded-lg px-1 py-1 min-w-20 max-w-30 hover:bg-blue-400 hover:cursor-pointer",
@@ -11959,45 +11959,45 @@ function Cu({ children: A, html: w }) {
   });
 }
 function Uy({ name: A }) {
-  return D.jsxs("div", {
+  return _.jsxs("div", {
     className: "flex flex-row items-center justify-between px-5 py-2 NavBar ",
     children: [
-      D.jsx(My, { name: A }),
-      D.jsxs("nav", {
+      _.jsx(My, { name: A }),
+      _.jsxs("nav", {
         className: "hidden sm:flex flex-row gap-3",
         children: [
-          D.jsx(Cu, { html: "#about", children: "About" }),
-          D.jsx(Cu, { html: "#works", children: "Works" }),
-          D.jsx(Cu, { html: "#contact", children: "Contact" }),
+          _.jsx(Cu, { html: "#about", children: "About" }),
+          _.jsx(Cu, { html: "#works", children: "Works" }),
+          _.jsx(Cu, { html: "#contact", children: "Contact" }),
         ],
       }),
     ],
   });
 }
 function wd({ contacts: A }) {
-  return D.jsxs("div", {
+  return _.jsxs("div", {
     className: "flex flex-row mt-0 mx-1 gap-1",
     children: [
       A.github &&
-        D.jsx(Cu, {
+        _.jsx(Cu, {
           html: A.github,
-          children: D.jsx("span", {
+          children: _.jsx("span", {
             className: "text-[16px]",
             children: "Github",
           }),
         }),
       A.linkedin &&
-        D.jsx(Cu, {
+        _.jsx(Cu, {
           html: A.linkedin,
-          children: D.jsx("span", {
+          children: _.jsx("span", {
             className: "text-[16px]",
             children: "LinkedIn",
           }),
         }),
       A.email &&
-        D.jsx(Cu, {
+        _.jsx(Cu, {
           html: `mailto:${A.email}`,
-          children: D.jsx("span", {
+          children: _.jsx("span", {
             className: "text-[16px]",
             children: "Email",
           }),
@@ -12006,35 +12006,35 @@ function wd({ contacts: A }) {
   });
 }
 function Ry({ name: A, address: w, contacts: G }) {
-  return D.jsxs("main", {
+  return _.jsxs("main", {
     children: [
-      D.jsxs("div", {
+      _.jsxs("div", {
         className:
           "flex flex-row items-center justify-between px-5 py-5 gap-2 bg-blue-400",
         children: [
-          D.jsx("section", {
+          _.jsx("section", {
             className: "w-2/3",
-            children: D.jsxs("h1", {
+            children: _.jsxs("h1", {
               className:
                 "text-wrap text-sm min-[600px]:text-3xl sm:text-3xl md:text-4xl lg:text-6xl",
               children: [
                 "Hi 👋",
-                D.jsx("br", {}),
+                _.jsx("br", {}),
                 "I'm ",
                 A,
                 " - website",
-                D.jsx("br", {}),
+                _.jsx("br", {}),
                 "designer and developer ",
-                D.jsx("br", {}),
+                _.jsx("br", {}),
                 " based in ",
                 w,
                 ".",
               ],
             }),
           }),
-          D.jsx("section", {
+          _.jsx("section", {
             className: "w-1/3 flex justify-center",
-            children: D.jsx("img", {
+            children: _.jsx("img", {
               className:
                 "rounded-full min-h-[100%] border-2 border-transparent hover:border-yellow-400",
               src: "src/assets/images/MyPic.jpg",
@@ -12043,36 +12043,36 @@ function Ry({ name: A, address: w, contacts: G }) {
           }),
         ],
       }),
-      D.jsx(wd, { contacts: G }),
+      _.jsx(wd, { contacts: G }),
     ],
   });
 }
 function py({ info: A }) {
-  return D.jsxs("article", {
+  return _.jsxs("article", {
     id: "about",
     className: "mt-4 mx-2 pt-12",
     children: [
-      D.jsx("h1", {
+      _.jsx("h1", {
         className: "font-bold text-3xl mb-2 ",
         children: "About.",
       }),
-      D.jsxs("article", {
+      _.jsxs("article", {
         className: "max-w-5xl mx-4",
         children: [
-          D.jsxs("p", {
+          _.jsxs("p", {
             children: [
               "I am ",
               A.name,
               ", a Full-Stack Web Developer and Cybersecurity Specialist with expertise in React, Next.js, WordPress, and penetration testing. Passionate about crafting secure, innovative, and user-friendly digital experiences, I blend my skills in web development and cybersecurity to create robust applications that prioritize performance and security.",
             ],
           }),
-          D.jsx("br", {}),
-          D.jsx("p", {
+          _.jsx("br", {}),
+          _.jsx("p", {
             children:
               "With hands-on experience in Cloudflare Workers, Clerk authentication, and UI/UX design with tools like Pixso and Webflow, I specialize in building scalable applications while ensuring strong security protocols. Beyond coding, I stay engaged with emerging technology, industry trends, and the latest advancements in cybersecurity.",
           }),
-          D.jsx("br", {}),
-          D.jsx("p", {
+          _.jsx("br", {}),
+          _.jsx("p", {
             children:
               "Always eager to learn, build, and innovate, I take on challenging projects that push the boundaries of technology and security. 🚀",
           }),
@@ -12082,60 +12082,68 @@ function py({ info: A }) {
   });
 }
 function Hy({ title: A, link: w, image: G }) {
-  return D.jsx("div", {
+  return _.jsx("div", {
     className:
       "flex flex-col justify-center items-center border-2 p-2 border-transparent hover:border-yellow-400",
-    children: D.jsxs("a", {
+    children: _.jsxs("a", {
       href: w,
+      target: "_blank",
       children: [
-        D.jsx("img", { className: "max-w-100% max-h-80", src: G, alt: A }),
-        D.jsx("h1", { className: "text-center", children: A }),
+        _.jsx("div", {
+          className: "aspect-[1920/913] w-full overflow-hidden",
+          children: _.jsx("img", {
+            src: G,
+            alt: A,
+            className: "w-full h-full object-cover",
+          }),
+        }),
+        _.jsx("h1", { className: "text-center", children: A }),
       ],
     }),
   });
 }
 function Ny({ projects: A }) {
-  return D.jsxs("div", {
+  return _.jsxs("div", {
     id: "works",
     className: "mt-4 pt-12",
     children: [
-      D.jsx("h1", {
+      _.jsx("h1", {
         className: "font-bold text-3xl mb-2 mx-2",
         children: "Works.",
       }),
-      D.jsx("section", {
+      _.jsx("section", {
         className: "grid grid-cols-1 md:grid-cols-2",
-        children: A.map((w) => D.jsx(Hy, { ...w })),
+        children: A.map((w) => _.jsx(Hy, { ...w })),
       }),
     ],
   });
 }
 function xy({ contacts: A }) {
-  return D.jsxs("div", {
+  return _.jsxs("div", {
     id: "contact",
     className: "mt-4 pt-12",
     children: [
-      D.jsx("h1", {
+      _.jsx("h1", {
         className: "font-bold text-3xl mb-2 mx-2",
         children: "Contact.",
       }),
-      D.jsxs("section", {
+      _.jsxs("section", {
         className: "flex flex-col mx-4",
         children: [
-          D.jsxs("h1", {
+          _.jsxs("h1", {
             className: "capitalize font-bold text-5xl sm:text-7xl lg:text-8xl",
-            children: ["LET'S WORK", D.jsx("br", {}), "TOGETHER"],
+            children: ["LET'S WORK", _.jsx("br", {}), "TOGETHER"],
           }),
-          D.jsx("div", {
+          _.jsx("div", {
             className: "my-2 ml-1 lg:ml-3",
-            children: D.jsx(Cu, {
+            children: _.jsx(Cu, {
               html: `tel:${A.phone}`,
               children: "Contact Now",
             }),
           }),
         ],
       }),
-      D.jsx(wd, { contacts: A }),
+      _.jsx(wd, { contacts: A }),
     ],
   });
 }
@@ -12143,9 +12151,9 @@ function qy() {
   const A = { name: "Shrestha Shome Ullas", address: "Tangail, Bangladesh" },
     w = [
       {
-        title: "Ullas's PC Repair Shop",
-        image: "src/assets/images/PC.png",
-        link: "https://repairshop-by-ullas.vercel.app/home/",
+        title: "Temu E-commerce clone",
+        image: "src/assets/images/Temu.png",
+        link: "https://temu-ecom.vercel.app/",
       },
       {
         title: "IMDb clone",
@@ -12153,14 +12161,24 @@ function qy() {
         link: "https://imdb-by-ullas.vercel.app/",
       },
       {
-        title: "Notion AI Clone",
-        image: "src/assets/images/Notion.png",
-        link: "https://cloned-notion-ai.vercel.app/",
+        title: "Startup Directory",
+        image: "src/assets/images/startups.png",
+        link: "https://yc-startup-directory.vercel.app/",
+      },
+      {
+        title: "Ullas's PC Repair Shop",
+        image: "src/assets/images/PC.png",
+        link: "https://repairshop-by-ullas.vercel.app/home/",
       },
       {
         title: "AI Chatbot",
         image: "src/assets/images/Helpbot.png",
         link: "https://ai-helper-chatbot.vercel.app/",
+      },
+      {
+        title: "Notion AI Clone",
+        image: "src/assets/images/Notion.png",
+        link: "https://cloned-notion-ai.vercel.app/",
       },
     ],
     G = {
@@ -12169,21 +12187,21 @@ function qy() {
       github: "https://github.com/ShresthaShome",
       linkedin: "https://www.linkedin.com/in/shrestha-shome/",
     };
-  return D.jsxs(D.Fragment, {
+  return _.jsxs(_.Fragment, {
     children: [
-      D.jsx(Uy, { name: A.name }),
-      D.jsx(Ry, { ...A, contacts: G }),
-      D.jsx(py, { info: A }),
-      D.jsx(Ny, { projects: w }),
-      D.jsx(xy, { contacts: G }),
-      D.jsxs("footer", {
+      _.jsx(Uy, { name: A.name }),
+      _.jsx(Ry, { ...A, contacts: G }),
+      _.jsx(py, { info: A }),
+      _.jsx(Ny, { projects: w }),
+      _.jsx(xy, { contacts: G }),
+      _.jsxs("footer", {
         className: "mt-3 pb-1 px-2 text-[14px]",
         children: [
           "Made with ❤️ by",
           " ",
-          D.jsx("a", {
+          _.jsx("a", {
             href: G.github,
-            children: D.jsx("u", { children: A.name }),
+            children: _.jsx("u", { children: A.name }),
           }),
         ],
       }),
@@ -12191,5 +12209,5 @@ function qy() {
   });
 }
 Dy.createRoot(document.getElementById("root")).render(
-  D.jsx(by.StrictMode, { children: D.jsx(qy, {}) })
+  _.jsx(by.StrictMode, { children: _.jsx(qy, {}) })
 );
